@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_card" />
+
+        <include layout="@layout/constraint_example_layout" />
+
+        <include layout="@layout/grid_example_layout" />
+
+        <include layout="@layout/linear_example_layout" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scrollable_area"
+            android:background="@android:color/holo_red_dark">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/long_text" />
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/item_card" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
